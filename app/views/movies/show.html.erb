@@ -4,3 +4,5 @@
 <p> <strong> Location: </strong>  <%= @movie.location %> </p>
 <p> <strong> Price: </strong>  <%= number_to_currency(@movie.price) %> </p>
 <p> <strong> Starts at: </strong>  <%= @movie.starts_at %> </p>
+
+<%= link_to 'All movies', movies_path %>

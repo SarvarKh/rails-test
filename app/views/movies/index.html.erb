@@ -2,7 +2,7 @@
 
 <ul>
     <% @movies.each do |movie| %>
-        <li> <strong> Name: </strong> <%= movie.name %> </li>
+        <li> <strong> Name: </strong> <%= link_to movie.name, movie_path(movie) %> </li>
         <li> <strong> Description: </strong>  <%= truncate(movie.description, length: 42, separator: ' ') %> </li>
         <li> <strong> Location: </strong>  <%= movie.location %> </li>
         <li> <strong> Price: </strong>  <%= number_to_currency(movie.price) %> </li>
