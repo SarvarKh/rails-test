@@ -4,6 +4,6 @@ class MoviesController < ApplicationController
     end
 
     def show
-        @movies = Movie.all
+        @movie = Movie.find(1)
     end
 end
