@@ -14,6 +14,6 @@
     <p> <%= f.label :starts_at %> </p>
     <p> <%= f.datetime_select :starts_at %> </p><br>
 
-    <p> <%= f.submit %> </p>
+    <%= f.submit %> | <%= link_to 'Cancel', movies_path %>
 
 <% end %>

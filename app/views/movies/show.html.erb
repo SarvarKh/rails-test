@@ -6,4 +6,5 @@
 <p> <strong> Starts at: </strong>  <%= @movie.starts_at %> </p>
 
 <%= link_to 'All movies', movies_path %> |
-<%= link_to 'Edit', edit_movie_path %> 
+<%= link_to 'Edit', edit_movie_path %> |
+<%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %>
