@@ -1,1 +1,9 @@
 <h2>Cool you are here!</h2>
+
+<ul>
+    <% @movies.each do |movie| %>
+        <li> <strong> Name: </strong> <%= movie.name %> </li>
+        <li> <strong> Location: </strong>  <%= movie.location %> </li>
+        <li> <strong> Price: </strong>  <%= movie.price %> </li>
+    <% end %>
+</ul>
