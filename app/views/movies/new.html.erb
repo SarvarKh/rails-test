@@ -1,0 +1,21 @@
+<h2>Creating movie </h2>
+
+<%= form_for(@movie) do |f| %>
+    <p> <%= f.label :name %> </p>
+    <p> <%= f.text_field :name, autofocus: true %> </p><br>
+
+    <p> <%= f.label :description %> </p>
+    <p> <%= f.text_area :description, cols: 48, rows: 6 %> </p><br>
+
+    <p> <%= f.label :price %> </p>
+    <p> <%= f.number_field :price %> </p><br>
+
+    <p> <%= f.label :location %> </p>
+    <p> <%= f.text_field :location %> </p><br>
+
+    <p> <%= f.label :starts_at %> </p>
+    <p> <%= f.datetime_select :starts_at %> </p><br>
+
+    <p> <%= f.submit %> </p>
+
+<% end %>
