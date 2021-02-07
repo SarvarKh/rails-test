@@ -14,6 +14,15 @@
     <p> <%= f.label :starts_at %> </p>
     <p> <%= f.datetime_select :starts_at %> </p><br>
 
+    <p>
+        <%= f.label :image_file_name %>
+        <%= f.text_field :image_file_name, size: 30,
+            placeholder: "GIF, JPG, or PNG file name" %>
+    </p>
+
+    <p> <%= f.label :capacity %> </p>
+    <p> <%= f.number_field :capacity %> </p><br>
+
     <%= f.submit %> | <%= link_to 'Cancel', movies_path %>
 
 <% end %>
