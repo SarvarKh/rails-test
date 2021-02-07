@@ -1,6 +1,7 @@
-<%= image_tag image_for(@movie) %>
-
 <h2> Name: <%= @movie.name %> </h2>
+
+<%= image_for(@movie) %>
+
 <p> <strong> Description: </strong>  <%= @movie.description %> </p>
 <p> <strong> Location: </strong>  <%= @movie.location %> </p>
 <p> <strong> Price: </strong>  <%= number_to_currency(@movie.price) %> </p>
