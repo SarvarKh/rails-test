@@ -1,13 +1,18 @@
 <h2> Total available: <%= pluralize(@movies.size, 'movie') %> </h2>
 
-<ul>
-    <% @movies.each do |movie| %>
-        <li> <strong> Name: </strong> <%= link_to movie.name, movie_path(movie) %> </li>
-        <li> <strong> Description: </strong>  <%= truncate(movie.description, length: 42, separator: ' ') %> </li>
-        <li> <strong> Location: </strong>  <%= movie.location %> </li>
-        <li> <strong> Price: </strong>  <%= number_to_currency(movie.price) %> </li>
-        <li> <strong> Starts at: </strong>  <%= movie.starts_at %> </li><br><br>
-    <% end %>
-</ul>
-
-<p> <%= link_to 'Create', new_movie_path %> </p>
+<% @movies.each do |movie| %>
+<article class="movie">
+    <header>
+        <h2> <strong> Name: </strong> <%= link_to movie.name, movie_path(movie) %> </h2>
+        <%= image_for(movie) %>
+    </header>
+    <section>
+        <p> <strong> Available: </strong>  <%= pluralize(movie.capacity, 'spot') %> </p>
+        <p> <strong> Description: </strong>  <%= truncate(movie.description, length: 42, separator: ' ') %> </p>
+        <p> <strong> Location: </strong>  <%= movie.location %> </p>
+        <p> <strong> Price: </strong>  <%= number_to_currency(movie.price) %> </p>
+        <p> <strong> Starts at: </strong>  <%= movie.starts_at %> </p>
+        <br><br>
+    </section>
+</article>
+<% end %>

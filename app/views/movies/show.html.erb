@@ -1,10 +1,11 @@
-
 <h2> Name: <%= @movie.name %> </h2>
+
+<%= image_for(@movie) %>
+
 <p> <strong> Description: </strong>  <%= @movie.description %> </p>
 <p> <strong> Location: </strong>  <%= @movie.location %> </p>
 <p> <strong> Price: </strong>  <%= number_to_currency(@movie.price) %> </p>
 <p> <strong> Starts at: </strong>  <%= @movie.starts_at %> </p>
 
-<%= link_to 'All movies', movies_path %> |
 <%= link_to 'Edit', edit_movie_path %> |
 <%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %>
