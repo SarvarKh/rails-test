@@ -1,16 +1,18 @@
 <h2> Total available: <%= pluralize(@movies.size, 'movie') %> </h2>
 
 <% @movies.each do |movie| %>
+<article class="movie">
     <header>
-        <p> <strong> Name: </strong> <%= link_to movie.name, movie_path(movie) %> </p>
+        <h2> <strong> Name: </strong> <%= link_to movie.name, movie_path(movie) %> </h2>
         <%= image_for(movie) %>
     </header>
     <section>
-        <p> <%= pluralize(movie.capacity, 'spot') %> </p>
+        <p> <strong> Available: </strong>  <%= pluralize(movie.capacity, 'spot') %> </p>
         <p> <strong> Description: </strong>  <%= truncate(movie.description, length: 42, separator: ' ') %> </p>
         <p> <strong> Location: </strong>  <%= movie.location %> </p>
         <p> <strong> Price: </strong>  <%= number_to_currency(movie.price) %> </p>
         <p> <strong> Starts at: </strong>  <%= movie.starts_at %> </p>
         <br><br>
     </section>
+</article>
 <% end %>
