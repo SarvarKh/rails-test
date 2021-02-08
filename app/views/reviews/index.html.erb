@@ -1,0 +1,9 @@
+<header id="content-header">
+    <h1>Reviews <%= link_to @movie.name, @movie %></h1>
+</header>
+
+<ol id="reviews">
+    <%= @reviews.each do |r|%>
+        <li> <%= mail_to(r.name, r.name) %> (<%= r.movie.name %>) </li>
+    <% end %>
+</ol>

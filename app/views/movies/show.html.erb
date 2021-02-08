@@ -7,5 +7,7 @@
 <p> <strong> Price: </strong>  <%= number_to_currency(@movie.price) %> </p>
 <p> <strong> Starts at: </strong>  <%= @movie.starts_at %> </p>
 
+<%= link_to "Who's reviewed?", movie_reviews_path(@movie) %><br><br>
+
 <%= link_to 'Edit', edit_movie_path %> |
-<%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %><br><br>
