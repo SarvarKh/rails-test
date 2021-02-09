@@ -9,5 +9,7 @@
 
 <%= link_to "Who's reviewed?", movie_reviews_path(@movie) %><br><br>
 
+<%= link_to 'Review', new_movie_review_path(@movie) %>
+
 <%= link_to 'Edit', edit_movie_path %> |
 <%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %><br><br>

@@ -14,6 +14,5 @@ class Review < ApplicationRecord
     'Other'
   ]
 
-  validates :how_heard,
-            inclusion: { in: HOW_HEARD_OPTIONS }
+
 end

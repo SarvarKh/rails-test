@@ -1,0 +1,17 @@
+<h1>Review for <%= link_to @movie.name, @movie %> </h1>
+
+<%= form_for([@movie, @review]) do |f| %>
+    <p> <%= f.label :name %> </p>
+    <p> <%= f.text_field :name, autofocus: true %> </p><br>
+
+    <p> <%= f.label :email %> </p>
+    <p> <%= f.text_field :email %> </p><br>
+
+    <p> <%= f.label :how_heard %> </p>
+    <p> <%= f.select :how_heard, 
+                      Review: :HOW_HEARD_OPTIONS, 
+                      prompt: "Pick one" %> </p><br>
+
+    <%= f.submit %> | <%= link_to 'Cancel', movies_path %><br><br>
+
+<% end %>
